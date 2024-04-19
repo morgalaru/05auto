@@ -509,7 +509,8 @@ div.reviewWrapper {
 }
 div.reviewWrapper div#reviewCards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 3rem;
   margin: 16px;
 }
 div.reviewWrapper div#reviewCards h3 {
@@ -523,7 +524,6 @@ div.reviewWrapper div#reviewCards img {
   filter: invert(15%) sepia(21%) saturate(19%) hue-rotate(342deg) brightness(100%) contrast(86%);
 }
 div.reviewWrapper div#reviewCards p {
-  margin-right: 3rem;
   margin-top: 0.2rem;
 }
 
