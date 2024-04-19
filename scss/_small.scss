@@ -1,0 +1,204 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+  
+/*---- apply a natural box layout model to all elements -------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+    background-color: #ebeae0;
+    h2{
+        font-family: $headingFont;
+    }
+}
+
+
+// HEADER
+#headerWrapper {
+    background-color: #ebeae0;
+    color: $secondaryColor;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem $gutter;
+    gap: 10px;
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: $boldWeight;
+    }
+    
+    div {
+        margin-left: auto;
+        display: flex;
+        .phone {
+            text-decoration: none;
+            color: $fontColor;
+            margin-right: .3rem;
+            &:hover{color: #61715d;}
+        }
+        button {
+            padding: .5rem;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: $primaryColor;
+        } 
+    }
+
+    button span:nth-child(1){display: block;}
+    button span:nth-child(2){display: none;}
+    button.open span:nth-child(1){display: none;}
+    button.open span:nth-child(2){display: block;}
+
+} // end header
+
+
+// NAV
+#navWrapper {
+    background-color: $primaryColor;
+}
+
+nav {
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+        li {flex:1;}
+    }
+    ul.open {display:block}
+
+    li.active {background-color: lighten($primaryColor, 5%);}
+    a {
+        display: block;
+        padding: 0.75rem;
+        color: $backgroundColor;
+        font-weight:300;
+        text-align: center;
+        text-decoration: none;
+        &:hover {background-color: lighten($primaryColor, 8%);}
+    }
+}
+
+
+// main
+.parentHero {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: brightness(60%);
+    }
+    p{
+        position: absolute;
+        top: calc(25% - 35px);
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.10) 8%, rgba(0,0,0,0.3) 51%, rgba(0,0,0,0.10) 91%, rgba(0,0,0,0) 100%);
+        margin: 0;
+        width: 100%;
+        padding: 1rem;
+        padding-left: 2rem;
+        color: #ecf1e6;
+        font-size: 2rem;
+        font-family: $headingFont;
+        font-weight: 400;
+    }
+    p span {
+        font-weight: 700;
+    }
+}
+
+.cards {
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem 8px;
+    section {
+        background-color: $backgroundColor;
+        border-radius: 8px;
+        filter: drop-shadow(0 0 0.1rem #d5d4c9);
+        padding: 1.5rem;
+        text-align: center;
+
+        p {text-align: left; padding: 0 1.5rem;}
+        button {
+            border: none;
+            background-color: $secondaryColor;
+            color: #f4f4ef;
+            padding: .7rem;
+            border-radius: 5px;
+            &:hover {background-color: darken($secondaryColor, 15%);}
+        }
+    }
+
+    img{
+        width: 50px;  
+        position: relative;
+        &:hover {animation: bounce 1s 1;}
+    }
+
+    @keyframes bounce {
+        0% {bottom:0px; animation-timing-function: ease-out;}
+        25% {bottom: 12px; animation-timing-function: ease-in;}
+        50% {bottom:0px; animation-timing-function: ease-out;}
+        75% {bottom: 7px; animation-timing-function: ease-in;}
+        100% {bottom: 0px; animation-timing-function: ease-out;}
+    }
+
+    img.paint {filter: invert(15%) sepia(21%) saturate(19%) hue-rotate(342deg) brightness(100%) contrast(86%);}
+} // end cards
+
+//reviews
+div.reviewWrapper {
+    padding: 2rem;
+    background-color: lighten($backgroundColor, 2%);
+    div#reviewCards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        margin: $gutter;
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: .3rem;
+            font-weight: $boldWeight;
+        }
+        img {
+            width: 10px;
+            margin: 2px;
+            filter: invert(15%) sepia(21%) saturate(19%) hue-rotate(342deg) brightness(100%) contrast(86%);
+        }
+        p {
+            margin-right: 3rem;
+            margin-top: .2rem;
+        }
+    }
+}
+
+
+
+// begin footer
+#footerWrapper {
+    background-color: #99a496;
+    padding: .8rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        color: #333;
+        text-align: center;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VROOM VROOM | Auto Dealership</title>
+    <meta name="description" content="a dealership called VROOM VROOM">
+    <meta name="author" content="Morgan Williams">
+
+    <!-- fav icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <a href="#"><img src="images/logo1x.png" alt="logo" width="126" height="40" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <div>
+            <a class="phone" href="tel:18700867006"><p>870-086-7006</p></a>
+            <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button>
+        </div>
+        </header>
+    </div>
+
+    <div id="navWrapper">
+        <nav>
+            <ul id="primaryNav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Locations</a></li>
+                <li class="active"><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="mainWrapper">
+        <main>
+            <div class="parentHero">
+                <img src="images/hero.webp" width="1200" height="500" alt="">
+                <p>WELCOME TO <br><span>VROOM VROOM</span></p>
+            </div>
+
+            <div class="cards">
+                <section>
+                    <img alt="repair icon" src="images/repair.svg">
+                    <h2>Repairs</h2>
+                    <p>We'll handle all your basic auto repairs with confidence. Appointemtns are required, sorry bout it.</p>
+                    <button>Learn More</button>
+                </section>
+                
+                <section>
+                    <img alt="oil icon" src="images/oil.svg">
+                    <h2>Oil Change</h2>
+                    <p>Everyone needs an oil change. We can do it efficiently at a low cost. No need for an appointment, just come in.</p>
+                    <button>Learn More</button>
+                </section>
+
+                <section>
+                    <img class="paint" alt="paint icon" src="images/pain.svg">
+                    <h2>Paint</h2>
+                    <p>Come get a paint match and we'll take it from there. It's going to look brand new.</p>
+                    <button>Learn More</button>
+                </section> 
+
+                <section>
+                    <img alt="car icon" src="images/car.svg">
+                    <h2>Rentals</h2>
+                    <p>We have endless options for rentals. You'll be sure to find something avaliable within your budget.</p>
+                    <button>Learn More</button>
+                </section>
+            </div>
+
+            <div class="reviewWrapper">
+                <h2>Customer Thoughts</h2>
+                <div id="reviewCards"></div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="footerWrapper">
+        <footer>
+            <p>Copyright &copy; <span id="year">x</span> &bullet; Morgan Williams</p>
+        </footer>
+    </div>
+    
+    <script src="js/scripts.js" type="module"></script>
+</body>
+</html>
