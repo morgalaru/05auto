@@ -166,8 +166,10 @@ nav {
 
 //reviews
 div.reviewWrapper {
+    margin-bottom: 3rem;
     padding: 2rem;
     background-color: lighten($backgroundColor, 2%);
+    filter: drop-shadow(0 0 0.1rem #d5d4c9);
     div#reviewCards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -194,7 +196,7 @@ div.reviewWrapper {
 // begin footer
 #footerWrapper {
     background-color: #99a496;
-    padding: .8rem $gutter;
+    padding: 1.5rem $gutter;
     p {
         margin: 0;
         font-weight: $lightWeight;

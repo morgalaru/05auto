@@ -504,8 +504,10 @@ nav a:hover {
 }
 
 div.reviewWrapper {
+  margin-bottom: 3rem;
   padding: 2rem;
   background-color: #f8f8f5;
+  filter: drop-shadow(0 0 0.1rem #d5d4c9);
 }
 div.reviewWrapper div#reviewCards {
   display: grid;
@@ -529,7 +531,7 @@ div.reviewWrapper div#reviewCards p {
 
 #footerWrapper {
   background-color: #99a496;
-  padding: 0.8rem 16px;
+  padding: 1.5rem 16px;
 }
 #footerWrapper p {
   margin: 0;
@@ -569,5 +571,8 @@ div.reviewWrapper div#reviewCards p {
   }
   .cards section p {
     padding: 0 0;
+  }
+  div.reviewWrapper {
+    border-radius: 8px;
   }
 }
